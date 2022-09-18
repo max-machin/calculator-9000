@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.calcul-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}

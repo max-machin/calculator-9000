@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react';
 
 import BeautifulScreen  from '../BeautifulScreen/BeautifulScreen'
@@ -7,7 +7,7 @@ import GreatOperationButton from '../GreatOperationButton/GreatOperationButton';
 
 import './Calculator.css'
 import ItSOverNineThousand from '../ItSOverNineThousand/ItSOverNineThousand';
-import axios from 'axios';
+
 
 
 export function Calculator() {
@@ -51,27 +51,26 @@ export function Calculator() {
     const handleCalcul = () => {
 
       switch (operator[0]){
-        
         case '+' : 
           return (
             setStateResult(true),
-            setResult(parseInt(nombre1.join('')) + parseInt(nombre2.join('')))
+            setResult(parseFloat(nombre1.join('')) + parseFloat(nombre2.join('')))
           )
         case "-" : 
           return (
             
             setStateResult(true),
-            setResult(parseInt(nombre1.join('')) - parseInt(nombre2.join('')))
+            setResult(parseFloat(nombre1.join('')) - parseFloat(nombre2.join('')))
           )
         case "x" :
           return (
             setStateResult(true),
-            setResult(parseInt(nombre1.join('')) * parseInt(nombre2.join('')))
+            setResult(parseFloat(nombre1.join('')) * parseFloat(nombre2.join('')))
           )
         case "÷" : 
           return (
             setStateResult(true),
-            setResult(parseInt(nombre1.join('')) / parseInt(nombre2.join('')))
+            setResult(parseFloat(nombre1.join('')) / parseFloat(nombre2.join('')))
           )
       }
     }
@@ -124,7 +123,7 @@ export function Calculator() {
           {/* <form method='post'   onSubmit={e => handleSave(e)}> */}
             <GreatOperationButton handleClickParentOperator={handleSubmitOperator} />
             <AmazingNumberButton handleClickParent={handleSubmit} />     
-            <button type="submit" className="save" value="save"></button>
+            <button type="submit" className="save" value="save"><img src='/logo192.png' width='30px' /></button>
             <button type="button" className="all-clear" value="all-clear" onClick={handleClear}>AC</button>
             <button type="button" className="equal-sign" value="=" onClick={handleCalcul}>=</button>
             <input type='hidden' value={operation} name="operation"></input>

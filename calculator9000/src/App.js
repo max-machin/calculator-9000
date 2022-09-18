@@ -24,6 +24,7 @@ function App() {
       <h1 className='title'>
         {titre}
       </h1>
+      
     )
   }
 

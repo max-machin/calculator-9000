@@ -41,6 +41,8 @@
 }
 
 .grid-template button.all-clear {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
     color: #ffffff;
     text-shadow: 0 1px rgba(255,255,255,0.2), 0 -1px rgba(164,27,21,0.8);
     background: #FA4C07;
@@ -66,7 +68,6 @@
 
 .grid-template button.zero {
     grid-row: 5 / 6;
-    grid-column: 1 / 2;
-    width: 100%;
+    grid-column: 2 / 2  ;
 }
 
